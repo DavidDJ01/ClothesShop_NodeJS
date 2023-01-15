@@ -1,0 +1,95 @@
+ <div class="logo">
+                  <img src="img/store.png" alt="">
+                  <h2>Dard Board</h2>
+           </div>
+            
+           <div class="items">
+              <li><a style="display: block;" href="/admin/list-user"><i class="fas fa-chart-pie"></i> List User</a></li>
+              <li><a style="display: block;" href="/admin/createUI"><i class="fas fa-edit"></i> Add User</a></li>
+              <li><a style="display: block;" href="/admin/list-product"><i class="fas fa-th-large"></i> List Product</a></li>
+              <li><a style="display: block;" href="/admin/add-product"><i class="fas fa-edit"></i> Add Product</a></li>
+              <li><a style="display: block;" href="/admin/list-category"><i class=" fas fa-hamburger"></i> List Category Product</a></li>
+              <li><a style="display: block;" href="/admin/shipment"><i class="fas fa-edit"></i>Shipment</a></li>
+              <li><a style="display: block;" href="/admin/orders-list"><i class="fas fa-edit"></i>Orders List</a></li>
+              <li><a style="display: block;" href="/admin/page-reports"><i class="fas fa-chart-line"></i> Report List</a></li>
+               <li><a style="display: block;" href="/admin/contact-manager"><i class="fas fa-chart-line"></i> Contact List</a></li>
+           </div>
+    </section>
+
+    <section id="interface">
+             <div class="navigation">
+                     <div class="n1">
+                      <div class="search">
+                        <i class="fas fa-search"></i>
+                          <input type="text" placeholder="Search" id="search-all">
+                      </div>
+                  </div>
+  
+                  <div class="protofile">
+                     <div class="bell">
+                       <a href=" #"><i class="far fa-bell" style="display: inline-block; position: relative;"></i>
+                         <ul>
+                              
+                         </ul>
+                       </a> 
+                       <span></span>
+                      
+                     </div>
+                      <div class="menudrop">
+                        {{#if yAdm}}
+                           <img src="{{dtta.avata}}" alt=""> <span>{{dtta.firstName}}</span> 
+                        {{else}}
+                         <img src="/img/user.png" alt="">
+                         {{/if}}
+                          <ul class="subnav-us">
+                                    <li><a href="#">Cài đặt tài khoản</a></li>
+                                    
+                                    <li><a class="log-out" href="#">Log Out</a></li>
+                                 </ul>
+                      </div>
+                  </div>
+             </div>
+             <script src="/notify.js"></script>
+
+             <h3 class="i-name">
+                 {{title}}
+             </h3>
+
+             <div class="values">
+                  <div class="val-box">
+                    <i class="fas fa-user"></i>
+                      <div>
+                         <h3> {{changeArr tong_SL_User}}</h3>
+                         <span>List User</span>
+                      </div>
+                  </div>
+
+                  <div class="val-box">
+                    <i class="fas fa-shopping-cart"></i>
+                      <div>
+                         <h3>{{changeArr tong_SL_Pro}}</h3>
+                         <span>List Product</span>
+                      </div>
+                  </div>
+
+                  <div class="val-box">
+                    <i class="fas fa-tshirt"></i>
+                      <div>
+                         <h3>{{changeArr tong_SL_Category}}</h3>
+                         <span>List Category</span>
+                      </div>
+                  </div>
+                     
+                  <div class="val-box">
+                    <i class="fas fa-shoe-prints"></i>
+                      <div>
+                         <h3>{{changeArr DonHang}}</h3>
+                         <span>Orders not approved</span>
+                      </div>
+                  </div>
+
+                   
+               </div>
+               <div class="navigationn" style="">
+                 
+               </div>

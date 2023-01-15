@@ -1,0 +1,337 @@
+    
+*
+,:before,
+:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+.col-lg-1{
+    float: left;
+}
+
+.breadcrumb {
+    padding: 10px;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: transparent;
+}
+
+
+
+a {
+    cursor: pointer;
+    outline: none;
+    color: #333;
+    text-decoration: none;
+    background: transparent;
+}
+a:hover, a:focus {
+    text-decoration: none;
+    color: #ffa500;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-home:before {
+    content: "\f015";
+}
+.breadcrumb>li+li:before {
+    content: "/\00a0";
+    padding: 0 5px;
+    color: #8c8c8c;
+}
+/* #content {
+    margin-top: 25px;
+} */
+
+@media (min-width: 768px) {
+    .col-sm-9 {
+        width: 75%;
+        float: left;
+    }
+}
+@media (min-width:768px) and (max-width:991px) {
+    .col-sm-9 {
+        width: 100%
+    }
+}
+.col-sm-9 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.blog-wrapper {
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.wrapper {
+    padding: 10px;
+    background-color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #ebeef2;
+}
+
+#content h1 {
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #333;
+    font-size: 16px;
+    font-size: 24px;
+    line-height: 46.5px;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: "museo300", sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    font-size: 2em;
+    margin: 0.67em 0;
+    display: block;
+
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+@media (max-width:767px) {
+    h1 {
+        font-size: 22px;
+    }
+}
+.product-filter {
+    padding: 12px 10px;
+    background-color: #fff;
+    color: #333;
+    font-weight: 600;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+    line-height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.product-filter .sort {
+    margin: 0 10px;
+    float: left;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.product-filter .sort select {
+    color: #ffa500;
+}
+@media print {
+    select {
+        background: #fff;
+    }
+}
+// select {
+//     font-family: inherit;
+//     font-size: 100%;
+//     margin: 0;
+//     text-transform: none;
+//     font-size: inherit;
+//     line-height: inherit;
+//     padding: 5px;
+//     margin-left: 0;
+//     margin-right: 0;
+//     -webkit-border-radius: 0;
+//     -moz-border-radius: 0;
+//     -ms-border-radius: 0;
+//     -o-border-radius: 0;
+//     border-radius: 0;
+//     -webkit-transition: all .15s linear 0;
+//     transition: all .15s linear 0;
+//     padding: 5px;
+//     border: 1px solid #ebeef2;
+//     color: #93999d;
+//     outline: none;
+//     padding: 4px;
+//     cursor: pointer;
+
+//     writing-mode: horizontal-tb !important;
+//     /* font-style: ;
+//     font-variant-ligatures: ;
+//     font-variant-caps: ;
+//     font-variant-numeric: ;
+//     font-variant-east-asian: ;
+//     font-weight: ;
+//     font-stretch: ;
+//     font-size: ;
+//     font-family: ; */
+//     text-rendering: auto;
+//     color: fieldtext;
+//     letter-spacing: normal;
+//     word-spacing: normal;
+//     line-height: normal;
+//     text-transform: none;
+//     text-indent: 0px;
+//     text-shadow: none;
+//     display: inline-block;
+//     text-align: start;
+//     appearance: auto;
+//     box-sizing: border-box;
+//     align-items: center;
+//     white-space: pre;
+//     -webkit-rtl-ordering: logical;
+//     background-color: field;
+//     cursor: default;
+//     margin: 0em;
+//     border-width: 1px;
+//     border-style: solid;
+//     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+//     border-image: initial;
+//     border-radius: 0px;
+// }
+// select:hover, select:focus {
+//     outline: none!important;
+// }
+
+// select:not(:-internal-list-box) {
+//     overflow: visible !important;
+// }
+
+// option {
+//     font-weight: normal;
+//     display: block;
+//     white-space: nowrap;
+//     min-height: 1.2em;
+//     padding: 0px 2px 1px;
+// }
+
+.product-grid {
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+}
+.product-grid .products-block {
+    border-bottom: 1px solid #ebeef2;
+}
+.product-filter .products-block {
+    border-bottom: 1px solid #ebeef2;
+}
+
+.products-block {
+    overflow: hidden;
+    border-top: 1px solid #ebeef2;
+    margin: 5px 0;
+}
+
+.product-items:last-child {
+    border-bottom: 0;
+}
+
+.product-items {
+    border-bottom: 1px solid #ebeef2;
+    margin: 0;
+}
+
+/* -------------------------------------------------------------Phân trang------------------------------------------------------------ */
+.pagination {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    background-color: #fff;
+
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+.blog-wrapper ul li {
+    list-style-position: inside;
+}
+.pagination>li {
+    display: inline;
+}
+.pagination>li>a,
+.pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 5px 10px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    color: #333;
+}
+.pagination>li:first-child>a,
+.pagination>li:first-child>span {
+    margin-left: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.pagination>li:last-child>a,
+.pagination>li:last-child>span {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px
+}
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+    z-index: 2;
+    color: #fff;
+    background-color: #ffa500;
+    border-color: #ffa500;
+    cursor: default;
+}
+.pagination .results {
+    float: right;
+    color: #333;
+    font-size: 14px;
+}
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
+    background-color: #eee;
+    color: #ffa500;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothes Shop</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" integrity="sha384-fZCoUih8XsaUZnNDOiLqnby1tMJ0sE7oBbNk2Xxf5x8Z4SvNQ9j83vFMa/erbVrV" crossorigin="anonymous"/>
+          {{#if pro}}
+           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+          {{/if}}          
+    <!-- Testimonials -->
+          <link rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                      crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+         <link rel="stylesheet" href="/css/app.css">
+         <script src="/socket.io/socket.io.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+      <script>
+           var socket = io.connect('http://localhost:3426')
+     </script>
+    {{#if yAdm}}
+     <div class="body">       
+          <section id="menu">
+               {{>navAD}}          
+                <div class="body-content">
+                      {{{body}}}        
+                </div>     
+                {{>modal}}       
+          </section>    
+           {{!-- Link main.js --}}
+          <script src="admin.js"></script>
+           <script src="admin_search.js"></script>     
+
+     </div>
+
+    {{else}}
+
+    <div class="main">
+        {{>header}}
+        {{{body}}}
+        {{>footer}}
+        {{>modal}} 
+        <script src="/main.js"></scrip>
+    </div>
+
+    {{/if}}
+   
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+     
+    
+</body>
+</html>

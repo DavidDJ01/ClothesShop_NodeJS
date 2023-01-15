@@ -1,0 +1,91 @@
+       {{!-- modal --}}
+<div class="modal">
+   <div class="container">
+       <header>  
+             <h1>LOGIN</h1>
+             <div class="nav-closee">
+                <i class="fas fa-times"></i>
+            </div>  
+       </header>
+       <div class="content-body">
+          <form method="POST" action="/admin/login">
+             <input type="text" name="email" class ="input"  placeholder="Enter your email" required = "true">
+             <input type="text" name="passWord" class ="input"   placeholder="Enter your password" required = "true">
+             <input type="submit" value="Login">
+              <a href="">Quên mật khẩu?</a>
+          </form>
+       </div>
+       <footer>
+           <a href="">Help?</a>
+       </footer>
+   </div>
+</div>
+{{!-- Xác nhận --}}
+<div class="xacnhan">
+   <div class="container">
+       <header>  
+             <h1>LOG OUT</h1>
+             <div class="nav-closee">
+                <i class="fas fa-times"></i>
+            </div>  
+       </header>
+       <div class="content-body">
+          <form method="POST" action="/admin/log-out">
+             <p style="text-align:start ;">Bạn có chắc thoát không</p>
+             <input type="submit" value="Xác nhận">
+          </form>
+       </div>
+   </div>
+</div> 
+
+{{!-- Edit User --}}
+
+<div class="editUS">
+     <div class="container">
+       <header>  
+             <h1>Edit User</h1>
+             <div class="nav-closee">
+                <i class="fas fa-times"></i>
+            </div>  
+       </header>
+       <div class="content-body">
+          <form method="post" action="/admin/updateUS/?_method=PATCH">
+          <input type="text" class="box-id" name="id"  placeholder="Nhập vào tên để thay đổi"  readonly = "true" style="opacity: 0.8 ;">
+             <input type="text" class="box-name" name="firstName" placeholder="Nhập vào tên để thay đổi">
+              <input required = "true" class="box-email" type="email" name="email" placeholder="Nhập vào email để thay đổi">
+                <input type="text" class="box-pass" name="passWord" placeholder="Nhập vào mật khẩu để thay đổi">      
+                  <select name="access" style="margin: 15px 0 ; width: 300px ;  padding: 8px 16px; border-radius: 5px; border: none; border-bottom: 1px solid rgba(238, 12, 185, 0.84); ;">
+                      <option style="margin: 15px;" value="admin" >Admin</option>
+                      <option style="margin: 15px;" value="khachhang">khachhang</option>
+                  </select>
+                    <input type="text" class="box-phone" name="numberPhone" placeholder="Nhập vào số điện thoại để thay đổi">
+                <input type="submit" value="Update">
+              
+          </form>
+       </div>
+   </div>
+</div>
+
+
+<div class="editUS">
+     <div class="container">
+       <header>  
+             <h1>Are you sure delete this User</h1>
+             <div class="nav-closee">
+                <i class="fas fa-times"></i>
+            </div>  
+       </header>
+       <div class="content-body">
+          <form method="post" action="/admin/deleteUS/?_method=DELETE">
+          <input type="text" class="box-id" name="id"  placeholder="Nhập vào tên để thay đổi"  readonly = "true" style="opacity: 0.8 ;">
+                <input type="submit" value="Delete">
+          </form>
+       </div>
+   </div>
+</div>
+
+
+
+
+
+

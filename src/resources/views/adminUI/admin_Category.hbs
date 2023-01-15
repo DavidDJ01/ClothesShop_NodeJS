@@ -1,0 +1,78 @@
+   
+   
+ <div style="padding: 0 32px;">
+    <button class="btn_Add_Cgr" style="padding: 12px 16px;color: #fff;background-color: orange; font-size: 20px">Add new Category</button>
+ </div>
+<dir class="board">
+  
+   <table width="100%">
+      <thead>
+         <tr>
+            <td>Number</td>
+            <td>ID</td>
+            <td>Name Category</td>
+            <td colspan="2" style="text-align: center">Update</td>
+         </tr>
+      </thead>
+      <tbody id="products">
+          <script type="text/javascript" src="admin_api_category.js"></script>
+      </tbody>
+   </table>
+
+</dir>
+
+<div class="addCategory ">
+     <div class="container">
+       <header>  
+             <h1>Add Category</h1>
+             <div class="close-add-categr">
+                <i class="fas fa-times"></i>
+            </div>  
+       </header>
+       <div class="content-body">
+          <form method="post" action="/admin/add-category">
+                <input type="text" class="box-id" name="NameCategory"  placeholder="Enter NameCategory..">
+                <input type="submit" value="Add">
+              
+          </form>
+       </div>
+   </div>
+</div>
+
+<div class="addCategory ">
+     <div class="container">
+       <header>  
+             <h1>Update Category</h1>
+             <div class="close-update-categr">
+                <i class="fas fa-times"></i>
+            </div>  
+       </header>
+       <div class="content-body">
+          <form method="post" action="/admin/update-category/?_method=PATCH">
+             <input type="text" class="box-id" name="id" id="id_Cgr_ud"  placeholder="Nhập vào tên để thay đổi"  readonly = "true" style="opacity: 0.8 ;">
+             <input type="text" class="box-name" id="name_Cgr_ud" name="NameCategory" placeholder="Enter Name Category to Change">
+                <input type="submit" value="Update">
+              
+          </form>
+       </div>
+   </div>
+</div>
+
+<div class="addCategory ">
+     <div class="container">
+       <header>  
+             <h1>Are you sure delete this category</h1>
+             <div class="close-delete-categr">
+                <i class="fas fa-times"></i>
+            </div>  
+       </header>
+       <div class="content-body">
+          <form method="post" action="/admin/delete-category/?_method=DELETE">
+             <input type="text" class="box-id" name="id"  id="id_Cgr_dl"  placeholder="Nhập vào tên để thay đổi"  readonly = "true" style="opacity: 0.8 ;">
+             <input type="text" class="box-name" name="firstName" id="name_Cgr_dl"  placeholder="Nhập vào tên để thay đổi">   
+                <input type="submit" value="Delete">
+              
+          </form>
+       </div>
+   </div>
+</div>

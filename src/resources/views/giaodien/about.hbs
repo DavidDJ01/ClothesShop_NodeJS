@@ -1,0 +1,139 @@
+<style>
+    body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.Section_top{
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+    position: relative;
+    background-image: url("image3.jpg");
+    animation: change 20s infinite ease-in-out;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.Section_top .content h1{
+    color: transparent;
+    display: grid;
+    text-shadow: rgba(135, 122, 122, 0.144);
+    background-image: linear-gradient(132deg, red, yellow, blue);
+    -webkit-background-clip: text ;
+    background-size: 400%;
+    animation: chaychu 5s linear infinite;
+}
+
+@keyframes chaychu{
+    100%{
+        background-position: 400%;
+    }
+}
+
+.content a{
+    background: #85c1ee;
+    padding: 10px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.content a:hover{
+    background: #034e88;
+    color: #fff;
+
+}
+
+@keyframes change{
+    0%{
+        background-image: url('/img-defaultUI/teamwwork1.jpg');
+    }
+    20%{
+        background-image: url("/img-defaultUI/teamwork2.jpg");
+    }
+    60%{
+        background-image: url('/img-defaultUI/teamwwork3.jpg');
+    }
+    80%{
+        background-image: url('/img-defaultUI/teamwwork4.jpg');
+    }
+    100%{
+        background-image: url('/img-defaultUI/imag2.jpg');
+    }
+}
+
+</style>
+<div style="position: relative">
+
+
+
+    <div class="Section_top">
+         <div class="content">
+            <h1 style="margin-bottom : 45px">Shop<span>Developer</span></h1>
+            <a href="#" style="margin-top: 45px">Welcome to my team</a>
+         </div>
+    </div>
+<div class="clothes" style="">
+
+ <div class="container"  >
+    <div class="box-clothes" style="width: 350px; height: 580px ; position: absolute; top: 50%; left: 130px; transform: translateY(-50%);"> 
+               <div class="box-clothes-backImg">
+                   <video autoplay loop muted class="back-video">
+                    <source src="img/bgdep.mp4" type="video/mp4">
+                   </video>
+                   <div class="box-clothes-backImg-img">
+                     <img src="/img/trang.jpg" alt="" style="border-radius: 50%">         
+                  </div>
+               </div>
+                
+               <div class="body-content">
+                  <h1>Developer FrontEnd</h1>
+                  <p> Thiết kế Front end
+                      Thiết kế và thu tập tài liệu
+                      Đảm nhiệm tốt nhiệm vụ thiết kế UI
+                  </p>
+                  <a href="https://www.facebook.com/profile.php?id=100023765082546">Xem chi tiết</a>
+               </div>
+           </div>
+
+     <div class="box-clothes"  style="width: 350px; height: 580px ; position: absolute; top: 50%; right: 130px; transform: translateY(-50%);"> 
+               <div class="box-clothes-backImg">
+                   <video autoplay loop muted class="back-video">
+                    <source src="img/bgdep.mp4" type="video/mp4">
+                   </video>
+                   <div class="box-clothes-backImg-img">
+                     <img src="/img-product/anhdao.jpg" alt="" style="border-radius: 50%">         
+                  </div>
+               </div>
+                
+               <div class="body-content">
+                  <h1>Developer Fullstack</h1>
+                  <p>Thiết kế back End
+                     Tạo cơ sở dữ liệu và thiết kế các chức năng cho người đùng và admin
+                     Đảm nhiệm tốt nhiệm vụ thiết kế UI và dữ liệu
+                  </p>
+                  <a href="https://www.facebook.com/daodo.chidz1989">Xem chi tiết</a>
+               </div>
+           </div>
+
+
+ </div>
+</div>
+</div>

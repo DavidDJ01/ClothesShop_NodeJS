@@ -1,0 +1,98 @@
+<style>
+    .default-title {
+        margin-top: 10px;
+        text-align: center;
+        color: #A9A9A9;
+    }
+
+    .box-xulyanh {
+        width: 95%;
+        height: 347px;
+        background-color: white;
+        border: 1px solid #333;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+</style>
+
+
+
+<div class="form-add" style="height: 690px;overflow: scroll;" >
+
+<form id="form" action="/admin/Add-Product" method="post" enctype="multipart/form-data">
+    <section class="box-us">
+
+        <div class="box-us-left" style="display: flex; justify-content: center; margin-top: 15px;">
+            <div class="box-img" style="padding: 15px 30px 0 30px; ">
+                <div class="box-img-main"
+                    style="width: 200px; height: 180px; position: relative; border: 11px solid rgba(238, 12, 185, 0.84)">
+                    <img class="ImgDF" style="margin-left: auto; margin-right: auto; height: 100%; width: 100%; border-radius: 1px;" src="img/df.png">
+                    <div style="position: absolute; top: 0; right: 0;">
+                        <label class="buttonED" for="uploadED"
+                            style=" display: inline-block;  cursor: pointer;border-radius: 5px; color: #f10b0bfa; font-size: 28px;font-weight: bold; "><i
+                                class="fa fa-pencil" aria-hidden="true"></i></label>
+                        <input  id="uploadED" style="margin-top: 150px; border: none ; display: none" type="file"
+                            onchange="readUrlED(this)" name="filename" accept="image/png, image/jpg, image/jpeg, image/mp4">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-us-right">
+            <div class="row-1">
+                <input required = "true" class="NamePro" name="Name" type="text" placeholder="Enter Name of Product"
+                    style="margin-right: 300px; border: none; border-bottom: 1px solid  rgba(238, 12, 185, 0.84)">
+                {{!-- <input required = "true" class="Category" name="Category" type="text" placeholder="Enter Category of Product"
+                    style="margin-right: 100px; border: none; border-bottom: 1px solid  rgba(238, 12, 185, 0.84)"> --}}
+                    <select name="Category" id="CategoryAdd" style="margin-right: 100px; border: none; border-bottom: 1px solid  rgba(238, 12, 185, 0.84)">
+                           <script src="option_category.js">
+                            
+                          </script>
+                          
+                    </select>
+            </div>
+            <div class="row-2" style="margin-top: 25px;">
+                {{!-- <input class="Description" name="Description" type="text"
+                    placeholder="Enter Description of Product" style="height: 100px;"> --}}
+                <textarea  id="w3review" name="Description" rows="5" cols="50" placeholder="Enter Description"
+                    style="padding: 15px ;border: 1px solid  rgba(238, 12, 185, 0.84); margin-right: 190px; margin-top: 10px;"></textarea>
+                <input required = "true" class="Color" name="Color" type="text" placeholder="Enter color of Product"
+                    style="margin-right: 100px; border: none; border-bottom: 1px solid  rgba(238, 12, 185, 0.84)">
+            </div>
+            <div class="row-3">
+                <input required = "true" class="Quantity" type="number" name="Quantity" placeholder="Enter Quantity of Product"
+                    style="margin-right: 300px; border: none; border-bottom: 1px solid  rgba(238, 12, 185, 0.84)">
+                <input required = "true" class="Price" type="number" name="Price" placeholder="Enter Price of Product"
+                    style="margin-right: 100px; border: none; border-bottom: 1px solid  rgba(238, 12, 185, 0.84)">
+            </div>
+            <div class="row-4" style="display: flex; justify-content: center">
+                <input  required = "true" class="btnCrUS" id="btnSM" type="submit" name="" id="btnAddPro" value="Add Product">
+            </div>
+        </div>
+
+    </section>
+</form>
+
+<script>
+    
+        function readUrlED(input) {
+       var check_file = $('#uploadED').val();
+        var extentsion = check_file.split('.').pop().toLowerCase();
+      if (input.files && input.files[0]) {
+        var filename = input.files[0].name;
+        var checkExt = filename.split('.');
+        if (checkExt[checkExt.length - 1] == 'png' || checkExt[checkExt.length - 1] == 'jpg' || checkExt[checkExt.length - 1] == 'jpeg' || checkExt[checkExt.length - 1] == 'mp4') {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('.ImgDF').attr('src', e.target.result);
+                $('.ImgDF').css('height', '100%')
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+          }
+
+     
+</script>
+</div>

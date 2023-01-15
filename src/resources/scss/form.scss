@@ -1,0 +1,119 @@
+.modal-form{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 199;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.open {
+    display: flex;
+}
+
+.modal-form .container{
+    background-color: #fff;
+    max-width: 855px;
+    width: 100%;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    height: 800px;
+    overflow: scroll;
+    position: relative;
+
+}
+
+.modal-form header{
+    display: block;
+    background-color: #fff;
+    color: var(--light-gradient);
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+
+
+.modal-form .content-body{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 30px;
+}
+
+.modal-form .content-body .input{
+    border-bottom: 1px solid rgba(238, 12, 185, 0.84);
+    display: block;
+    width: 300px;
+    padding: 8px 16px;
+    margin-bottom: 18px;
+}
+
+.modal-form .content-body a:hover {
+    opacity: 0.6;
+}
+
+.modal-form .content-body input[type="submit"]{
+    display: block;
+    padding: 10px 16px;
+    cursor: pointer;
+    width: 300px;
+    margin-bottom: 25px;
+}
+
+.modal-form .content-body input[type="submit"]:hover{
+    background-color: #000;
+    color: #fff;
+}
+ .modal-form footer a{
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     display: inline-block;
+     margin: 25px;
+ }
+ .modal-form footer a:hover{
+    opacity: 0.6;
+ }
+
+ .modal-form header .close-form-update{
+    display: block;
+    position: absolute;
+    top : 23px ;
+    right : 23px;
+    cursor: pointer;
+ }
+
+ .modal-form header .close-form-update i{
+    font-size: 28px;
+ }
+
+ .modal-form header .close-form-update:hover{
+    opacity: 0.6;
+ }
+
+ 
+ .btn_delete_pro:hover{
+    opacity: 0.7;
+ }
+
+
+ .modal-form header .close-form-delete{
+    display: block;
+    position: absolute;
+    top : 23px ;
+    right : 23px;
+    cursor: pointer;
+ }
+
+ .modal-form header .close-form-delete i{
+    font-size: 28px;
+ }
+
+ .modal-form header .close-form-delete:hover{
+    opacity: 0.6;
+ }

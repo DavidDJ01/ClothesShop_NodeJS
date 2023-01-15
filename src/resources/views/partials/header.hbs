@@ -1,0 +1,250 @@
+<header class="header" id="header">
+   <div class="header-container">
+      <a href="" class="logo">
+         <img src="/img/store.png" class="logo">
+      </a>
+      <nav class="nav ">
+         <ul class="nav-menu">
+            <li><a href="/" class="nav-link active">Home</a></li>
+            <li><a href="/about/" class="nav-link">About</a></li>
+            <li class="nav-products"><a href="/product/home-page" class="nav-link">products</a>
+                         <ul class="nav-subnav-products">
+                            <li><a href="/product/page-prod-1" style="">All Product</a></li>
+                         </ul>
+            </li>
+            <li><a href="/product/cart" class="nav-link">Cart</a></li>
+            <li class="user-mobile"><a href="#testimonials" class="nav-link ">profile</a>
+               <ul class="subnav-us">
+                  <li><a class="sign-in" href="#">Sign In</a></li>
+                  <li><a class="log-out" href="#">Log Out</a></li>
+                  <li><a class="sign-out" href="#">Sign Out</a></li>
+               </ul>
+            </li>
+            <li><a href="/contact" class="contact">contact</a></li>
+         </ul>
+         <div class="nav-close visible">
+            <i class="fas fa-times"></i>
+         </div>
+      </nav>
+
+      <div class="nav-icon">
+         <div class="nav-us">
+            {{#if yUser}}
+
+            <img  data-iduser = "{{dta._id}}"  class="user-login" src="{{dta.avata}}"> <span>{{dta.firstName}}</span>
+            {{else}}
+            <img src="/img/user.png" alt="">
+            {{/if}}
+            <ul class="subnav-us">     
+               {{#if yUser}}
+               <li style="display: none ;"><a class="sign-in" href="#">Sign In</a></li>
+               <li><a class="log-out" href="#">Log Out</a></li>
+               <li style="display: none ;"><a class="sign-out" href="#">Sign Out</a></li>
+               {{else}}
+               <li><a class="sign-in" href="#">Sign In</a></li>
+               <li><a class="sign-out" href="#">Sign Out</a></li>
+               {{/if}}
+            </ul>
+         </div>
+      </div>
+
+      <div class="nav-toggle" id="nav-toggle">
+         <i class="fas fa-bars"></i>
+      </div>
+
+   </div>
+</header>
+
+<form method="post" name="log-out"></form>
+
+{{#if yUser}}
+<div class="modal">
+   <div class="container">
+      <header>
+         <h1>LOGIN</h1>
+         <div class="nav-closee">
+            <i class="fas fa-times"></i>
+         </div>
+      </header>
+      <div class="content-body">
+         <form method="POST" action="/login">
+            <input type="text" name="email" class="input" placeholder="Enter your email" required="true">
+            <input type="text" name="passWord" class="input" placeholder="Enter your password" required="true">
+            <input type="submit" value="Login">
+            <a href="">Quên mật khẩu?</a>
+         </form>
+      </div>
+      <footer>
+         <a href="">Help?</a>
+      </footer>
+   </div>
+</div>
+{{else}}
+{{#if yCode}}
+<div class="modal-signoutcode openXN">
+   <div class="container">
+      <header>
+         <h1>THIS CODE WAS SEND YOUR EMAIL</h1>
+         <div class="nav-closee">
+            <i class="fas fa-times"></i>
+         </div>
+      </header>
+      <div class="content-body">
+         <form method="POST" action="/admin/checkcode">
+            <input type="text" name="code" class="input" placeholder="Enter your CODE" required="true">
+            <input type="submit" value="Xác nhận">
+         </form>
+      </div>
+      <footer>
+         <a href="">Help?</a>
+      </footer>
+   </div>
+</div>
+{{!-- modal --}}
+<div class="modal">
+   <div class="container">
+      <header>
+         <h1>LOGIN</h1>
+         <div class="nav-closee">
+            <i class="fas fa-times"></i>
+         </div>
+      </header>
+      <div class="content-body">
+         <form method="POST" action="/login">
+            <input type="text" name="email" class="input" placeholder="Enter your email" required="true">
+            <input type="text" name="passWord" class="input" placeholder="Enter your password" required="true">
+            <input type="submit" value="Login">
+            <a href="">Quên mật khẩu?</a>
+         </form>
+      </div>
+      <footer>
+         <a href="">Help?</a>
+      </footer>
+   </div>
+</div>
+{{else}}
+
+<div class="modal">
+   <div class="container">
+      <header>
+         <h1>LOGIN</h1>
+         <div class="nav-closee">
+            <i class="fas fa-times"></i>
+         </div>
+      </header>
+      <div class="content-body">
+         <form method="POST" action="/login">
+            <input type="text" name="email" class="input" placeholder="Enter your email" required="true">
+            <input type="text" name="passWord" class="input" placeholder="Enter your password" required="true">
+            <input type="submit" value="Login">
+            <a href="">Quên mật khẩu?</a>
+         </form>
+      </div>
+      <footer>
+         <a href="">Help?</a>
+      </footer>
+   </div>
+</div> {{/if}}
+{{/if}}
+
+{{#if ySignOut}}
+<div class="modal-signout openXN">
+   <div class="container">
+      <header>
+         <h1>SIGN UP</h1>
+         <div class="nav-closee">
+            <i class="fas fa-times"></i>
+         </div>
+      </header>
+      <div class="content-body">
+         <form method="POST" action="/admin/sign-out">
+            <input type="text" name="firstName" class="input" placeholder="Enter your firstName" required="true">
+            <input type="text" name="email" class="input" placeholder="Enter your email" required="true">
+            <input type="text" name="passWord" class="input" placeholder="Enter your password" required="true">
+            <input type="text" name="numberPhone" class="input" placeholder="Enter your NumberPhone" required="true">
+            <input type="submit" value="Sign out">
+         </form>
+      </div>
+      <footer>
+         <a href="">Help?</a>
+      </footer>
+   </div>
+</div>
+{{/if}}
+
+
+<div class="xacnhan">
+   <div class="container">
+      <header>
+         <h1>LOG OUT</h1>
+         <div class="nav-closee">
+            <i class="fas fa-times"></i>
+         </div>
+      </header>
+      <div class="content-body">
+         <form method="POST" action="/log-out">
+            <p style="text-align:start ;">Bạn có chắc thoát không</p>
+            <input type="submit" value="Xác nhận">
+         </form>
+      </div>
+   </div>
+</div>
+
+
+{{!-- Sign Out --}}
+
+<div class="modal-signout ">
+   <div class="container">
+      <header>
+         <h1>SIGN UP</h1>
+         <div class="nav-closee">
+            <i class="fas fa-times"></i>
+         </div>
+      </header>
+      <div class="content-body">
+         <form method="POST" action="/admin/getcode">
+            <input type="text" name="email" class="input" placeholder="Enter your email to sign-up" required="true">
+            <input type="submit" value="Xác nhận">
+         </form>
+      </div>
+      <footer>
+         <a href="">Help?</a>
+      </footer>
+   </div>
+</div>
+
+{{#if errLogin}}
+<div class="modal-lg2">
+   <div class="container">
+      <header>
+         <h1>LOGIN</h1>
+         <div class="nav-closee">
+            <i class="fas fa-times"></i>
+         </div>
+      </header>
+      <div class="content-body">
+         <form method="POST" action="/login">
+            <input type="text" name="email" class="input" placeholder="Enter your email" required="true">
+            <input type="text" name="passWord" class="input" placeholder="Enter your password" required="true">
+            <p style="font-size: 14px;color: red; margin: 15px 0; font-style: italic; opacity: 0.8;">{{errMess}}</p>
+            <input type="submit" value="Login">
+            <a href="">Quên mật khẩu?</a>
+         </form>
+      </div>
+      <footer>
+         <a href="">Help?</a>
+      </footer>
+   </div>
+   
+     <script>
+        const modall =  document.querySelector('.modal-lg2')
+        const  btnClosee = document.querySelector('.modal-lg2 header .nav-closee');
+        modall.classList.add("openXN")
+        if(btnClosee!=null){
+          btnClosee.onclick = function(){
+          modall.classList.remove("openXN");
+         }
+        }
+     </script>
+</div>
+{{/if}}

@@ -1,0 +1,217 @@
+<link rel="stylesheet" href="/css/form.css">
+<style>
+    .btnAddProd:hover {
+        opacity: 0.7;
+    }
+</style>
+<div class="tools-prod">
+    <div>
+        <label><i style="color: green" class="fa fa-filter" aria-hidden="true"></i> Lọc theo loại </label>
+        <select name="Category" id="CategoryAdd" class="select" style="">
+            <script src="option_category.js">
+
+            </script>
+
+        </select>
+    </div>
+
+    <div>
+        <label style="margin-left:40px"><i style="color: green" class="fa fa-sort" aria-hidden="true"></i> Sắp
+            xếp</label>
+        <select class="select" id="sortProd">
+            <option>Sắp xếp<i style="color: rgb(16, 24, 16)" class="fa fa-sort" aria-hidden="true"></i> </option>
+            <option value="1">Giá sản phẩm từ thấp -> cao</option>
+            <option value="2 ">Giá sản phẩm từ cao -> thấp</option>
+            <option value="3">Tên sản phẩm từ A -> Z</option>
+            <option value="4">Tên sản phẩm từ Z -> A</option>
+        </select>
+    </div>
+</div>
+
+  <div>
+        <div class="btnBefore" style="padding: 0 32px; margin-top: 15px; ">
+            <button class="btnAddProd "
+                style="position: relative;;padding: 12px 16px;color: #fff;background-color: rgba(61, 141, 50, 0.658); font-size: 20px">
+                <a href="/admin/export-product"><i style="color: rgb(2, 253, 2);" class="fa fa-table"
+                        aria-hidden="true"></i> <span style="color : white">Export Excell</span></a></button>
+
+        </div>
+    </div>
+
+
+<dir class="board" style="height: 610px;">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td> <span>Image</span> </td>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Category</td>
+                <td>Quantity</td>
+                <td>Price</td>
+                <td>Description</td>
+                <td>Color</td>
+                <td colspan="2" style="text-align: center">Update</td>
+            </tr>
+        </thead>
+        <tbody id="products">
+            <script type="text/javascript" src="admin_api_product.js"></script>
+        </tbody>
+    </table>
+
+</dir>
+{{!-- Form Edit --}}
+<div class="modal-form">
+    <div class="container">
+        <header>
+            <h1>UPDATE PRODUCT</h1>
+            <div class="close-form-update">
+                <i class="fas fa-times"></i>
+            </div>
+        </header>
+        <div class="content-body">
+            {{!-- Start body --}}
+            <form action="/admin/Update_Product/?_method=PATCH" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id" class="id">
+                <section class="box-us" style="margin: 0;">
+                    <div class="box-us-left" style="display: flex; justify-content: center; margin-top: 15px;">
+                        <div class="box-img" style="padding: 15px 30px 0 30px; ">
+                            <div class="box-img-main"
+                                style="width: 200px; height: 180px; position: relative; border: 11px solid rgba(238, 12, 185, 0.84)">
+                                <img class="ImgDF"
+                                    style="margin-left: auto; margin-right: auto; height: 100%; width: 100%; border-radius: 1px;"
+                                    src="img/df.png">
+                                <div style="position: absolute; top: 0; right: 0;">
+                                    <label class="buttonED" for="uploadED"
+                                        style=" display: inline-block;  cursor: pointer;border-radius: 5px; color: #f00c0c; font-size: 28px;font-weight: bold; "><i
+                                            class="fa fa-pencil" aria-hidden="true"></i></label>
+                                    <input id="uploadED" style="margin-top: 150px; border: none ; display: none"
+                                        type="file" onchange="readUrlED(this)" name="filename"
+                                        accept="image/png, image/jpg, image/jpeg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-us-right" style="padding: 10px 15px;">
+                        <div class="row-1">
+                            <input required="true" class="NamePro" name="Name" type="text"
+                                placeholder="Enter Name of Product"
+                                style=" border: none; border-bottom: 1px solid  rgba(238, 12, 185, 0.84)">
+                        </div>
+                        <div class="row-1">
+                            <select name="Category" id="CategoryAdd"
+                                style="margin-right: 100px; border: none; border-bottom: 1px solid  rgba(238, 12, 185, 0.84)">
+                                <script src="option_category.js">
+
+                                </script>
+
+                            </select>
+                        </div>
+
+                        <div class="row-2" style="margin-top: 25px;">
+                            {{!-- <input class="Description" name="Description" type="text"
+                                placeholder="Enter Description of Product" style="height: 100px;"> --}}
+                            <textarea class="desc" id="w3review" name="Description" rows="5" cols="50"
+                                placeholder="Enter Description"
+                                style="padding: 15px ;border: 1px solid  rgba(238, 12, 185, 0.84); margin-right: 10px; margin-top: 10px;"></textarea>
+                            <input required="true" class="Color" name="Color" type="text"
+                                placeholder="Enter color of Product"
+                                style="border: none; border-bottom: 1px solid  rgba(238, 12, 185, 0.84)">
+                        </div>
+                        <div class="row-3">
+                            <input required="true" class="Quantity" type="number" name="Quantity"
+                                placeholder="Enter Quantity of Product"
+                                style=" border: none; border-bottom: 1px solid  rgba(238, 12, 185, 0.84)">
+                            <input required="true" class="Price" type="number" name="Price"
+                                placeholder="Enter Price of Product"
+                                style="border: none; border-bottom: 1px solid  rgba(238, 12, 185, 0.84)">
+                        </div>
+                        <div class="row-4" style="display: flex; justify-content: center">
+                            <input required="true" class="btnCrUS" type="submit" name="" id="btnAddPro"
+                                value="Update Product" style="background-color: rgb(22, 170, 96);">
+                        </div>
+                    </div>
+
+                </section>
+            </form>
+            {{!-- End body body --}}
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+</div>
+
+
+{{!-- Form delete --}}
+<div class="modal-form">
+    <div class="container" style="max-width: 480px; width: 100%; height: 580px ; overflow: hidden;">
+        <header>
+            <h1>DELETE PRODUCT</h1>
+            <div class="close-form-delete">
+                <i class="fas fa-times"></i>
+            </div>
+        </header>
+
+        <div class="content-body">
+            {{!-- Start body --}}
+            <form method="post" action="/admin/Delete-Product/?_method=DELETE">
+                <div class="row-0" style="padding: 10px; display: flex; justify-content: center;">
+                    <div class="box-img" style="padding: 15px 30px 0 30px; ">
+                        <div class="box-img-main"
+                            style="width: 200px; height: 180px; position: relative; border: 8px solid rgba(238, 12, 185, 0.84)">
+                            <img id="ImgDF"
+                                style="margin-left: auto; margin-right: auto; height: 100%; width: 100%; border-radius: 1px;"
+                                src="img/df.png">
+                            <div style="position: absolute; top: 0; right: 0;">
+                                <input id="uploadED" style="margin-top: 150px; border: none ; display: none" type="file"
+                                    onchange="readUrlED(this)" name="filename"
+                                    accept="image/png, image/jpg, image/jpeg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-1" style="padding: 15px; text-align: center; ">
+                    <input
+                        style="padding: 10px 14px;border: none; border-bottom: 1px solid rgba(238, 12, 185, 0.84); font-size: 20px; border-radius: 5px;"
+                        type="text" class="id_DL" name="id" placeholder="Nhập vào tên để thay đổi" readonly="true"
+                        style="opacity: 0.8 ;">
+                </div>
+                <div class="row-2" style="padding: 15px; text-align: center; ">
+                    <input
+                        style="padding: 10px 14px;border: none; border-bottom: 1px solid rgba(238, 12, 185, 0.84); font-size: 20px; border-radius: 5px;"
+                        type="text" class="name_DL" name="Name" placeholder="Nhập vào tên để thay đổi" readonly="true"
+                        style="opacity: 0.8 ;">
+                </div>
+                <div class="row-3" style="padding: 20px; display: flex; justify-content: center;">
+                    <input class="btn_delete_pro" style="background-color: rgba(192, 36, 57, 0.84) ; color: aliceblue;"
+                        type="submit" value="Delete">
+                </div>
+
+            </form>
+            {{!-- End body body --}}
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+</div>
+<script>
+    function readUrlED(input) {
+        var check_file = $('#uploadED').val();
+        var extentsion = check_file.split('.').pop().toLowerCase();
+        if (input.files && input.files[0]) {
+            var filename = input.files[0].name;
+            var checkExt = filename.split('.');
+            if (checkExt[checkExt.length - 1] == 'png' || checkExt[checkExt.length - 1] == 'jpg' || checkExt[checkExt.length - 1] == 'jpeg') {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('.ImgDF').attr('src', e.target.result);
+                    $('.ImgDF').css('height', '100%')
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    }
+</script>

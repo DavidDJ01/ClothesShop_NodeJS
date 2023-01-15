@@ -1,0 +1,280 @@
+ <link rel="stylesheet" href="/css/pro.css">
+ <link rel="stylesheet" href="/css/detail-product.css">
+ <style>
+  
+ </style>
+     <div class="mid-header" style="margin-top: 130px ;">
+            <div class="container-search header-mid">
+                <div class="row-search">
+                    <div class="col-lg-6-search col-md-6-search col-sm-6-search hidden-xs search">
+                        <div class="header_search">
+                            <div class="input-group-search search-bar">
+                                <input type="text" name="search" value="" placeholder="Tìm kiếm"
+                                    class="search-auto input-group-field st-default-search-input search-text"
+                                    autocomplete="off">
+                                <ul class="dropdown-menu-search"></ul>
+                                <span class="input-group-btn-search">
+                                    <button class="btn-search icon-fallback-text" type="button">
+                                        <span class="fa fa-search"></span>
+                                        <span class="hidden-lg hidden-md">Tìm kiếm</span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-lg-3-search col-md-4-search col-sm-3-search cart">
+                        <div class="hotline hidden-xs hidden-sm">
+                            <a href="tel:0798 262 782">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <div class="hotline_box">
+                                    Hotline: <br>
+                                    <strong>0798 262 782</strong>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="top-cart-contain">
+                            <div class="top_phone_number mini-cart" id="cart">
+                                <a data-toggle="dropdown" data-loading-text="Đang tải"
+                                    class="basket dropdown-toggle-search">
+                                    <div class="phone-img">
+                                        <a href="/product/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="text" id="cart-total">
+                                        <p class="phone-box"><strong><span>0 sản phẩm </span></strong></p>
+                                 
+                                    </div>
+                                </a>
+
+                                <div class="top-cart-content arrow_box dropdown-menu-search" style="width:350px">
+                                    <ul id="cart-sidebar" class="mini-products-list" style="width:350px">
+                                        <li class="item li" style="display: flex; padding: 4px 0px; border-bottom: 1px solid #ddd;">
+                                            <div class="box-leftt">
+                                                    <img src="/img-product/aoden.jpg" alt="">
+                                            </div>
+                                            <div class="box-rightt">
+                                                     <p>Áo đen <span>-</span> 300$</p>
+                                                     <input type="number" style="width: 100px; border: none; border: 1px solid rgba(223, 17, 154, 0.89);" >
+                                                     <input type="button" class="btn btn-danger" style="padding: 4px; margin-bottom: 4px; width: 80px;" value="Xóa">
+                                            </div>
+                                        </li>
+                                        <li class="item" style="display: flex; padding: 4px 0px; border-bottom: #ddd;">
+                                            <div class="box-leftt">
+                                                    <img src="/img-product/aoden.jpg" alt="">
+                                            </div>
+                                            <div class="box-rightt">
+                                                    <p>Áo đen</p>
+                                                     <input type="number" >
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="container-category" style="margin-top: 20px;"></div>
+    <div class="container-category">
+        <div class="row-category">
+            <aside id="column-left" class="col-sm-3 sidebar" style="margin-top: 65px;">
+                  <div class="product-img-box col-sm-6 col-xs-12 col-lg-6 col-12"  >
+                                            <div class="relative product-image-block" >
+                                                <div class="slider-product-image clearfix margin-bottom-10">
+                                                    <div class="fancybox-slider slick-initialized slick-slider" style="padding-left: 45px;">
+                                                        <div class="slick-list draggable" style="width: 460px;">
+                                                            <div class="slick-track"
+                                                                style="opacity: 1; width: 2250px; transform: translate3d(0px, 0px, 0px);">
+                                                                <a class="zw-href-default slick-slide slick-current slick-active"
+                                                                    href="/img-product/{{data.image.name}}" title="Click để xem"
+                                                                    data-fancybox="gallery" data-src="/img-product/{{data.image.name}}"
+                                                                    data-caption="Đầm tiểu thư" data-slick-index="0"
+                                                                    aria-hidden="false" tabindex="0" >
+                                                                    <img src="/img-product/{{data.image.name}}" alt="{{data.Name}}"
+                                                                       data-image="/img/dam-tieu-thu.jpg" data-buffer = "{{data.image.data}}" data-imgName = "{{data.image.name}}"
+                                                                        class="img-responsive center-block zw-images-default" style="height: 500px;">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            </aside>
+            <div id="content" class="col-sm-9" style="margin-top: 15px; ">
+                <!-- <div style="height:100px"></div> -->
+                <div class="pluggage-product">
+                    <h1 style="display:none">{{data.Name}}</h1>
+                    <div class="container" style="margin-right: 0px ; margin-left: 100px;">
+                        <div class="row">
+                            <div id="content" class="col-sm-12">
+                                <div class="col-main">
+                                    <div class="row">
+                                        <div class="product-shop col-sm-6 col-xs-12 col-lg-6 col-12">
+                                            <div class="price-title" style="padding: 17px 12px;">
+                                                <div class="product-name">
+                                                    <h1 style="color: orange; font-size: 29px; font-weight: 600; line-height: 1.4;" class="soLuongSP nameSP" data-quantity = "{{data.Quantity}}" data-slug = "{{data.slug}}" data-id = "{{data.idData}}">{{data.Name}}</h1>
+                                                </div>
+                                                <div class="price-block">
+                                                    <div class="qv_price">
+                                                        <span class="regular-price">
+                                                            <span style="color: black; font-size:25px; font-weight: 600;" class="price zw-price">{{data.Price}}$</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="rating">
+                                                <div>
+                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                </div>
+                                            </div>
+            
+                                            <div class="social-product">
+                                                <div class="social">
+                                                    
+            
+                                                </div>
+                                            </div>
+                                            <div class="price-block"> </div>
+                                            <hr>
+                                            <div class="add-to-box">
+                                                <div class="add-to-cart">
+                                                    <div id="product">
+                                                        <div class="product-qyt-action clearfix">
+                                                            <div class="quantity-title qty pull-left">Số lượng:</div>
+                                                            <div class="quantity-adder pull-left">
+                                                                <div class="quantity-number pull-left">
+                                                                    <input type="text" name="quantity" value="0" size="2"
+                                                                        id="input-quantity" class="form-control inputSL">
+                                                                </div>
+                                                                <div class="quantity-wrapper pull-left">
+                                                                    <span class="add-up add-action">
+                                                                        <i class="fa fa-plus"></i>
+                                                                    </span>
+                                                                    <span class="add-down add-action">
+                                                                        <i class="fa fa-minus"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <input type="hidden" name="product_id" value="">
+                                                        <div class="clearfix" style="margin-top: 60px">
+                                                            <div class="product-page-buy-button">
+                                                                <button type="button" id="button-cart"
+                                                                    data-loading-text="Đang tải..." class="btn btn-primary">
+                                                                    <span> Thêm vào giỏ
+                                                                        <!-- <svg viewBox="0 0 32 32">
+                                                                            <use href="#icon-arrow" xlink:href="#icon-arrow"></use>
+                                                                        </svg> -->
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="short-description">
+                                                <div class="short-des v-base-content">
+                                                    <ul class="USPList__USPs-sc-1ee6lpp-0 eOZBjG">
+                                                        <li class="USPList__USPItem-sc-1ee6lpp-1 BdIWd">
+                                                            <span class="css-1fgw2as USPList__USPParagraph-sc-1ee6lpp-3 kEVSUI">
+                                                                FREESHIP</span>
+                                                        </li>
+                                                        <li class="USPList__USPItem-sc-1ee6lpp-1 BdIWd">
+                                                            <span class="css-1fgw2as USPList__USPParagraph-sc-1ee6lpp-3 kEVSUI">
+                                                                HOÀN TRẢ MIỄN PHÍ</span>
+                                                        </li>
+                                                        <li class="USPList__USPItem-sc-1ee6lpp-1 BdIWd">
+                                                            <span class="css-1fgw2as USPList__USPParagraph-sc-1ee6lpp-3 kEVSUI">
+                                                                Thuế và lệ phí hải quan sẽ được áp dụng khi giao hàng theo quy định
+                                                                của Hải Quan Việt Nam</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div> <!-- product description -->
+            
+                                        <div class="col-sm-12 col-lg-12 col-12">
+                                            <div class="product-collateral">
+                                                <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
+                                                    <li><a class="tab1 active show" href="#productTabContent" data-toggle="tab">Mô tả</a></li>
+                                                    <li><a href="#tab-review" data-toggle="tab" class="tab2">Đánh giá (0)</a></li>
+                                                </ul>
+                                                <div id="productTabContent" class="tab-content">
+                                                    <div class="tab-pane active" id="tab-description">
+                                                        <div class="std v-base-content">
+                                                            <p style="padding: 0 24px;">
+                                                                {{data.Description}}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane review " id="tab-review" style="color : black">
+                                                        <div class="product-tabs-content-inner clearfix">
+                                                            <form class="form-horizontal" id="form-review">
+                                                                <div id="review">
+                                                                </div>
+                                                                <h2>Viết đánh giá</h2>
+                                                                <div class="form-group required">
+                                                                    <div class="col-sm-12">
+                                                                        <label class="control-label" for="input-name">Nick Name</label>
+                                                                        <input type="text" name="name" value="" id="input-name"
+                                                                            class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group required">
+                                                                    <div class="col-sm-12">
+                                                                        <label class="control-label" for="input-review">Nội dung
+                                                                            đánh giá</label>
+                                                                        <textarea name="text" rows="5" id="input-review"
+                                                                            class="form-control"></textarea>
+            
+                                                                        <div class="help-block"><span class="text-danger">Chú
+                                                                                ý:</span> Không sử dụng các định dạng HTML!
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group required">
+                                                                    <div class="col-sm-12">
+                                                                        <label class="control-label">Xếp hạng</label>
+                                                                        &nbsp;&nbsp;&nbsp; Chưa tốt&nbsp;
+                                                                        <input type="radio" name="rating" value="1"> &nbsp;
+                                                                        <input type="radio" name="rating" value="2"> &nbsp;
+                                                                        <input type="radio" name="rating" value="3"> &nbsp;
+                                                                        <input type="radio" name="rating" value="4"> &nbsp;
+                                                                        <input type="radio" name="rating" value="5"> &nbsp;Tốt
+                                                                    </div>
+                                                                </div>
+                                                                <div class="buttons clearfix">
+                                                                    <div class="pull-right">
+                                                                        <button type="button" id="button-review"
+                                                                            data-loading-text="Đang tải..."
+                                                                            class="btn btn-primary">Tiếp tục
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <script src="/detail.js"></script>
+  <script src="/card-Detail.js"></script>
+  <script src="/cart.js"></script>

@@ -1,0 +1,65 @@
+
+
+               <!-- Bảng -->
+
+             <dir class="board" style="height: 690px;">
+                  <table  width = "100%" >
+                            <thead>
+                                <tr>
+                                   <td> <span>Avata</span> </td>
+                                   <td>ID</td>
+                                   <td>Name</td>
+                                   <td>Email</td>
+                                   <td>PassWord</td>
+                                   <td>NumberPhone</td>
+                                   <td>Access</td>
+                                   <td colspan="2" style="text-align: center">Update</td>
+                                </tr>
+                            </thead>
+                            <tbody id="products">
+                               {{#each tong_SL_User}}
+                                <tr>
+                                   <td class="people">
+                                        <img src="{{this.avata}}">
+                                   </td>
+                                   <td class="people-des">
+                                         <h5>{{this._id}}</h5>
+                                   </td>
+
+                                   <td class="role">
+                                         <p>{{this.firstName}}</p>
+                                   </td>
+
+                                   <td>
+                                       {{this.email}}
+                                   </td>
+
+                                   <td>
+                                      {{this.passWord}}
+                                   </td>
+
+                                   <td>
+                                      {{this.numberPhone}}
+                                   </td>
+                                      
+                                   <td>
+                                       {{this.access}}
+                                   </td>
+
+                                   <td class="edit">
+                                         <a data-id = "{{this._id}}" class="btnEditUS" data-name="{{this.firstName}}" 
+                                         data-email="{{this.email}}" 
+                                         data-pass="{{this.passWord}}" 
+                                         data-numberphone="{{this.numberPhone}}"
+                                         href="#">Edit</a>
+                                   </td>
+
+                                   <td class="delete">
+                                    <a  data-id="{{this._id}}" class="btnDeleteUS" href="#">Delete</a>
+                                  </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                  </table>
+             </dir>  
+

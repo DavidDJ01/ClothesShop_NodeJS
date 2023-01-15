@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="/css/pro.css">
+<link rel="stylesheet" href="/css/cart.css">
+
+
+<style>
+    .product .box-leftt {
+                  overflow: hidden;
+                  width: 130px;
+                  height: 150px;
+
+    }
+    .product .box-leftt img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .product .box-rightt{
+        padding: 4px 40px;
+    }
+    .product{
+        padding: 8px;
+        border-bottom: 1px solid rgba(223, 17, 154, 0.89);
+    }
+</style>
+
+<div class="container-cart" style="margin-top: 140px;"> </div>
+<div class="container-cart">
+    <ul class="breadcrumb-cart">
+        <li><a href="/product/home-page"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/cart.html">Cart</a></li>
+    </ul>
+    <h1 style="font-size: 30px;">Giỏ hàng</h1>
+    <div class="row-cart">
+        <div id="content-cart" class="col-sm-12-cart">
+            <div class="pav-filter-blogs-cart wrapper-cart blog-wrapper-cart"
+                style="padding: 20px; border: 1px solid rgba(223, 17, 154, 0.89);">
+                <div class="ctn">
+                </div>
+                <div class="buttons-cart clearfix-cart">
+                     <div class="money">
+                        <h1 style="color: orange;">Thành Tiền : 300</h1>
+                     </div>
+                    <div class="pull-right-cart btncheckSM">
+                        <a href="#" class="btn-thanhtoan btn-cart btn-primary-cart" style="width: 300px; padding: 15px 0;">Thanh Toán</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-cart">
+     <div class="container" style="max-width: 500px;">
+       <header>  
+             <h1 style="color: orange; font-size: 30px; text-transform: uppercase;">Enter Your Information in this form</h1>
+             <div class="nav-closee">
+                <i class="fas fa-times"></i>
+            </div>  
+       </header>
+       <div class="content-body" style="padding: 10px;">
+          <form >
+          <input required = "true" type="text" class="box-id" name="nameCTM"  placeholder="Nhập tên người nhận hàng"   style="opacity: 0.8 ;">
+             <input required = "true" type="tel" class="box-name" name="telCTM" placeholder="Nhập vào số điện thoại nhận hàng">
+              <input required = "true" class="box-email" type="text" name="Address1" placeholder="Tên tỉnh - thành phố">
+                <input type="text" class="box-pass" name="Address2" placeholder="huyện - quận - thị xã">      
+                    <input type="text" class="box-phone" name="Address3" placeholder="Tổ - Khu phố - ấp - phường">
+                 <input type="submit" name="btnSubmit"  value="Xác nhận" style="margin-top: 45px;">
+              
+          </form>
+       </div>
+   </div>
+</div>
+{{!-- /add-orders --}}
+<script src="/in-cart.js"></script>
