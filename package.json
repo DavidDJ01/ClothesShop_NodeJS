@@ -2,12 +2,12 @@
   "name": "clothes_shop",
   "version": "1.0.0",
   "description": "Shop bán quần áo dựa trên yêu cầu khách hàng ",
-  "main": "server.js",
+  "main": "src/server.js",
   "engines": {
     "node": "14.x"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon src/server.js",
     "watch": "node-sass --watch src/resources/scss -o src/public/css",
     "watch_prod": "node-sass --watch src/resources/scss/pro.scss -o src/public/css/",
     "watch_form": "node-sass --watch src/resources/scss/form.scss -o src/public/css/",

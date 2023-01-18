@@ -4,8 +4,8 @@ const port = 3426;
 const path = require('path');
 const handles = require('express-handlebars');
 const bodyParse = require('body-parser')
-const db = require('./src/config');
-const route = require('./src/route/index')
+const db = require('./config');
+const route = require('./route/index')
 const cookie = require("cookie-parser")
 const nodeMailer = require("nodemailer")
 const methodOvRide = require("method-override");
@@ -13,13 +13,12 @@ const cors = require("cors")
 //const { Socket } = require("dgram");
 var server = require('http').createServer(app)
 var io = require("socket.io")(server)
-const Socket_Shipment = require("./src/Socket/socketShipment")
-const Socket_Detail = require("./src/Socket/socketDetail")
-const Socket_Order = require("./src/Socket/socketOrders")
-const Socket_contact = require("./src/Socket/socketContact")
-
+const Socket_Shipment = require("./Socket/socketShipment")
+const Socket_Detail = require("./Socket/socketDetail")
+const Socket_Order = require("./Socket/socketOrders")
+const Socket_contact = require("./Socket/socketContact")
 var admin = require("firebase-admin")
-var serviceAdmin = require("./src/config/clothesshopreview-firebase-adminsdk-9k558-dd778fa742.json")
+var serviceAdmin = require("./config/clothesshopreview-firebase-adminsdk-9k558-dd778fa742.json")
 admin.initializeApp({
   credential: admin.credential.cert(serviceAdmin)
 });
@@ -32,7 +31,7 @@ app.use(express.urlencoded({
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "src/public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(cors())
 
@@ -51,7 +50,7 @@ app.engine("hbs", handles.engine({
       }
 }))
 app.set("view engine", "hbs");
-app.set("views", path.join(__dirname, "src//resources//views"))
+app.set("views", path.join(__dirname, "resources//views"))
 
 db.connect();
 
